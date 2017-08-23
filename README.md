@@ -2,13 +2,13 @@
 Personal NeoVim configuration
 
 # Install
-cd ~/.config/
-git clone https://github.com/danmikita/nvim.git
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-:PlugInstall
-brew install python3
-pip3 install neovim
+  1. cd ~/.config/
+  2. git clone https://github.com/danmikita/nvim.git
+  3. curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \\
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  4. :PlugInstall
+  5. brew install python3
+  6. pip3 install neovim
 
 # Wishlist
   * auto-formatting
