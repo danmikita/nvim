@@ -49,7 +49,7 @@ let g:neomake_info_sign = {
       \ 'text': s:info_sign,
       \ 'texthl': s:info_hl,
       \ }
-set makeprg=mvn\ clean\ install\ -DskipTests
+set makeprg=mvn\ compile\ -q\ -DskipTests
 
 
 let mapleader = ","
