@@ -8,50 +8,24 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'janko-m/vim-test'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'neomake/neomake'
+Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Raimondi/delimitMate'
 call plug#end()
 
-
-" Signs and highlighting for errors, etc.
-let s:error_sign = '✘'
-let s:error_hl = 'ErrorMsg'
-let s:warning_sign = '♦'
-let s:warning_hl = 'WarningMsg'
-let s:message_sign = '→'
-let s:message_hl = 'Normal'
-let s:info_sign = '…'
-let s:info_hl = 'Normal'
-
 " Syntax checking on save
-augroup run_neomake
-  autocmd!
-  autocmd BufReadPost,BufWritePost * Neomake
-augroup END
-let g:neomake_open_list = 2
-let g:neomake_verbose = 1
-let g:neomake_java_enabled_makers=['javac']
-let g:neomake_error_sign = {
-      \ 'text': s:error_sign,
-      \ 'texthl': s:error_hl,
-      \ }
-let g:neomake_warning_sign = {
-      \ 'text': s:warning_sign,
-      \ 'texthl': s:warning_hl,
-      \ }
-let g:neomake_message_sign = {
-      \ 'text': s:message_sign,
-      \ 'texthl': s:message_hl,
-      \ }
-let g:neomake_info_sign = {
-      \ 'text': s:info_sign,
-      \ 'texthl': s:info_hl,
-      \ }
-set makeprg=mvn\ clean\ install\ -DskipTests
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '♦'
+let g:airline#extensions#ale#enabled = 1
+let g:ale_echo_msg_error_str = 'Error'
+let g:ale_echo_msg_warning_str = 'Warning'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_set_quickfix = 1
+let g:ale_set_loclist = 0
+" let g:ale_open_list = 1
 
-
+set makeprg=mvn\ compile\ -q\ -DskipTests
 let mapleader = ","
 set number
 set autowrite
