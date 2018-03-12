@@ -85,6 +85,10 @@ Plug 'tomasr/molokai'
 "" Go Lang Bundle
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 
+" vimdevicons
+Plug 'ryanoasis/vim-devicons'
+set encoding=utf8
+
 
 "*****************************************************************************
 "*****************************************************************************
