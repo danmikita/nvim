@@ -431,6 +431,8 @@ endfunction
 " let g:syntastic_auto_loc_list=1
 " let g:syntastic_aggregate_errors = 1
 
+" ALE
+let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'yaml': ['prettier'],
