@@ -1,5 +1,8 @@
-# nvim
+![alt text](https://neovim.io/images/logo@2x.png "NeoVim")
 Personal NeoVim configuration
+
+## Installation
+
 
 
 ## Change Log
