@@ -1,5 +1,4 @@
-![alt text](https://neovim.io/images/logo@2x.png "NeoVim")
-Personal NeoVim configuration
+# Personal ![alt text](https://neovim.io/images/logo@2x.png "NeoVim") Config
 
 ## Installation
 
