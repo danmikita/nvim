@@ -4,3 +4,4 @@ autoload/
 plugged/
 backup.vim
 tags
+ftplugin/
