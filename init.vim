@@ -45,7 +45,6 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
-" Plug 'w0rp/ale'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -466,7 +465,7 @@ noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
 "" Close buffer
-noremap <leader>c :bd<CR>
+noremap <leader>c :bw<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
@@ -492,12 +491,14 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.Gbrowse<CR>
 
 "*****************************************************************************
-"" Language Server Settings
+" Language Server Settings
 "*****************************************************************************
 let g:LanguageClient_serverCommands = {
     \ 'java': ['~/.config/nvim/lsp/jdtls'],
     \ 'yaml': ['node', '/usr/local/lib/node_modules/yaml-language-server/out/server/src/server.js', '--stdio'],
     \ 'dockerfile': ['node', '/usr/local/lib/node_modules/dockerfile-language-server-nodejs/bin/docker-langserver', '--stdio'],
+    \ 'sh': ['bash-language-server', 'start'],
+    \ 'xml': ['java', '-jar', '~/code/lsp4xml/org.eclipse.lsp4xml/target/org.eclipse.lsp4xml-all.jar'],
     \ }
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
