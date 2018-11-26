@@ -172,6 +172,7 @@ let g:session_command_aliases = 1
 syntax on
 set ruler
 set number
+set splitbelow
 
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
@@ -276,7 +277,7 @@ let g:vimshell_prompt =  '$ '
 
 " terminal emulation
 if g:vim_bootstrap_editor == 'nvim'
-  nnoremap <silent> <leader>sh :terminal<CR>
+  nnoremap <silent> <leader>sh :split <bar> resize 20 <bar> term<CR>
 else
   nnoremap <silent> <leader>sh :VimShellCreate<CR>
 endif
