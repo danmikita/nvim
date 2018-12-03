@@ -166,17 +166,17 @@ set ruler
 set number
 set splitbelow
 
+set mousemodel=popup
+" set t_Co=256
+set guioptions=egmrti
+set gfn=Monospace\ 10
+set termguicolors
+
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
   set background=dark
   colorscheme solarized8
 endif
-
-set mousemodel=popup
-set t_Co=256
-set guioptions=egmrti
-set gfn=Monospace\ 10
-set termguicolors
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
